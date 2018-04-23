@@ -1,0 +1,91 @@
+.weather {
+  color: #a7a7a7;
+  font-weight: 700;
+  font-family: 'Raleway', sans-serif;
+  box-shadow: 0px 0px 29px -1px rgba(0, 0, 0, 0.51);
+  .card-header {
+    border-bottom: none;
+  }
+  .card-footer {
+    border-top: none;
+  }
+  .card-body {
+    position: relative;
+    background: linear-gradient(rgba(47, 47, 47, 0.7), rgba(47, 47, 47, 0.7)), url(/images/traffic.jpg);
+    padding: 0;
+    height: 160px;
+    background-size: cover;
+    &::after,
+    &::before {
+      content: '';
+      width: 100%;
+      height: 160px;
+      z-index: 10;
+      display: block;
+      position: absolute;
+    }
+    &::before {
+      bottom: 0;
+      box-shadow: inset 0px 10px 9px 0px rgb(40, 44, 66);
+    }
+    &::after {
+      top: 0;
+      box-shadow: inset 0px -10px 9px 0px rgb(40, 44, 66);
+    }
+    .icon {
+      position: absolute;
+      left: 5%;
+      top: 5%;
+    }
+    .temperature {
+      position: absolute;
+      font-size: 3.5rem;
+      left: 0;
+      right: 0;
+      color: #fff;
+      top: 28%;
+      text-shadow: 4px 3px #420101;
+    }
+    .day {
+      position: absolute;
+      right: 3%;
+      bottom: 3%;
+    }
+    .clouds {
+      position: absolute;
+      left: 3%;
+      bottom: 7%;
+      font-size: 10px;
+    }
+    .additional {
+      position: absolute;
+      right: 3%;
+      top: 10%;
+      font-size: 12px;
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .card-footer {
+    .date {
+      position: relative;
+      .hour {
+        font-size: 3rem;
+      }
+      .day {
+        top: 0;
+        position: absolute;
+        left: 0;
+        right: 0;
+      }
+    }
+    .desc {
+      font-weight: 100;
+      font-size: 12px;
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+}
