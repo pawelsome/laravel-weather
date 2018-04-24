@@ -1,5 +1,8 @@
 <?php
 
 return [
-    'url' => 'http://api.openweathermap.org/data/2.5/forecast?id=756135&units='.env('WEATHER_UNITS').'&APPID='.env('WEATHER_KEY'),
+    'city_id' => env('WEATHER_CITY_ID'),
+    'units' => env('WEATHER_UNITS'),
+    'key' => env('WEATHER_APP_KEY')
+
 ];
