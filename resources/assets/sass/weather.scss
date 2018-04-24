@@ -3,16 +3,9 @@
   font-weight: 700;
   font-family: 'Raleway', sans-serif;
   box-shadow: 0px 0px 29px -1px rgba(0, 0, 0, 0.51);
-  .card-header {
-    border-bottom: none;
-  }
-  .card-footer {
-    border-top: none;
-  }
   .card-body {
     position: relative;
     background: linear-gradient(rgba(47, 47, 47, 0.7), rgba(47, 47, 47, 0.7)), url(/images/traffic.jpg);
-    padding: 0;
     height: 160px;
     background-size: cover;
     &::after,

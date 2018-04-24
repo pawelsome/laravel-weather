@@ -3,18 +3,20 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use Cache;
+use App\Services\WeatherService;
 
 class WeatherController extends Controller
 {
+    protected $weatherService;
+
+    public function __construct(WeatherService $weatherService)
+    {
+        $this->weatherService = $weatherService;
+    }
+
     public function getIndex()
     {
-        $data = Cache::remember('weather', 60, function () {
-            $url = 'http://api.openweathermap.org/data/2.5/forecast?id=756135&APPID=f5ccbbac0ab5899cfab69917d3445f4f&units=metric';
-            $json = file_get_contents($url);
-            $data = json_decode($json);
-            return $data;
-        });
-        return view('pages.index', ['data' => $data]);
+        $data = $this->weatherService->getWeather();
+        return view('pages.index', compact('data'));
     }
 }
