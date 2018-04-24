@@ -5,9 +5,9 @@
             @foreach (array_slice($data->list , 0, 12) as $day)
                 <div class="col-lg-3 mx-auto my-5">
                     <div class="card bg-gray weather text-center">
-                        <div class="card-header text-uppercase">{{ $data->city->name }} ({{ $data->city->country }})
+                        <div class="card-header border-0 text-uppercase">{{ $data->city->name }} ({{ $data->city->country }})
                         </div>
-                        <div class="card-body">
+                        <div class="card-body p-0">
                             <div class="icon">
                                 <img src="http://openweathermap.org/img/w/{{ $day->weather[0]->icon }}.png"
                                      alt="icon">
@@ -22,7 +22,7 @@
                                 Clouds: {{ $day->clouds->all}} %
                             </div>
                         </div>
-                        <div class="card-footer pt-0">
+                        <div class="card-footer border-0 pt-0">
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="date">
